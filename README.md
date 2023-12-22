@@ -15,6 +15,7 @@
 - React (Create React App) 
 - Redux 
 - React Router 
+- Node 
 - Auth0 
 - Stripe 
  
