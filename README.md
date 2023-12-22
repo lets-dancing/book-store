@@ -20,7 +20,7 @@
  
 ## Установка 
  
-1. Склонируйте репозиторий 
+1. Склонируйте репозиторий
 
 git clone https://github.com/username/book-store.git
 
@@ -42,6 +42,7 @@ npm start
 REACT_APP_STRIPE_KEY=YOUR_KEY 
 
 REACT_APP_STRIPE_SECRET_KEY=YOUR_KEY
+
 Здесь указываются ключи доступа к Stripe. 
  
 ## Компоненты 
