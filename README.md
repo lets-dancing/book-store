@@ -23,10 +23,13 @@
 1. Склонируйте репозиторий 
 
 git clone https://github.com/username/book-store.git
+
 2. Установите зависимости
 npm install
+
 3. Запустите приложение
 npm start
+
 4. Приложение будет доступно по адресу http://localhost:3000
 
 5. Для работы Stripe и Auth0 необходимо создать свои аккаунты и получить ключи доступа. Замените их в src/Stripe/StripeContainer.js и src/index.js соответственно.
@@ -37,6 +40,7 @@ npm start
 
 7. Необходимо создать .env файл в корне проекта со следующим содержимым:
 REACT_APP_STRIPE_KEY=YOUR_KEY 
+
 REACT_APP_STRIPE_SECRET_KEY=YOUR_KEY
 Здесь указываются ключи доступа к Stripe. 
  
