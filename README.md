@@ -21,7 +21,6 @@
 ## Установка 
  
 1. Склонируйте репозиторий
-
 git clone https://github.com/username/book-store.git
 
 2. Установите зависимости
@@ -39,10 +38,8 @@ npm start
 Сервер будет доступен по адресу http://localhost:8080.
 
 7. Необходимо создать .env файл в корне проекта со следующим содержимым:
-REACT_APP_STRIPE_KEY=YOUR_KEY 
-
+REACT_APP_STRIPE_KEY=YOUR_KEY
 REACT_APP_STRIPE_SECRET_KEY=YOUR_KEY
-
 Здесь указываются ключи доступа к Stripe. 
  
 ## Компоненты 
