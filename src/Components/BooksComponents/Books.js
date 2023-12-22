@@ -1,15 +1,15 @@
 import { useSelector } from 'react-redux';
 import booksData from '../../data/booksData';
-import Book from "./Book";
 import { getSelectGenre } from '../../redux/booksSlice';
 import { getSelectSearchTerm } from '../../redux/searchSlice';
+import Book from './Book';
 
 function Books() {
     const selectedGenre = useSelector(getSelectGenre);
     const searchTerm = useSelector(getSelectSearchTerm);
 
     return ( 
-        <div>
+        <div className='booksContainer'>
             {booksData
             .filter(book => {
                 if (selectedGenre === "Все категории") return true;

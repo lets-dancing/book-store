@@ -19,7 +19,9 @@ function CartItem({cartItem}) {
     
     return ( 
         <div className="cartItem">
+            <img className="cartItemCover" src={`./${cartItem.bookImage}.webp`} alt={cartItem.bookImage}></img>
             <h2>{cartItem.bookName}</h2>
+            <p>{cartItem.bookAuthor}</p>
             <p>{cartItem.quantity}{declension(cartItem.quantity, [' экземпляр', ' экземпляра', ' экземпляров'])}</p>
             <div>
                 <button onClick={() => {dispatch(decreaseQuantity(cartItem))}}>-</button>

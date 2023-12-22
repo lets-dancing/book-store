@@ -7,10 +7,10 @@ function Search() {
     const dispatch = useDispatch();
     
     return (
-        <div>
+        <div className='searchInput'>
         <input
             type="text"
-            placeholder="Введите название или автора..."
+            placeholder="Искать в каталоге..."
             value={searchTerm}
             onChange={(e) => {
                 dispatch(setSearchTerm(e.target.value));

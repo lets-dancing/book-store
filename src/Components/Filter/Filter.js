@@ -6,7 +6,7 @@ function Filter({genre}) {
     const selectedGenre = useSelector(getSelectGenre);
 
     return ( 
-        <div>
+        <div className="genreItem">
             <p onClick={() => {dispatch(filteredGenre(genre))}} className={selectedGenre === genre ? "selectedGenre" : "staticGenre"}>{genre}</p>
         </div>
     );

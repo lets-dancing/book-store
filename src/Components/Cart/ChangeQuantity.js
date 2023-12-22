@@ -12,11 +12,11 @@ function ChangeQuantity({quantity, setQuantity}) {
         setQuantity(newQuantity);
     }
     return ( 
-        <div>
-        <button onClick={subtractQuantity}>-</button>
-        <span className="quantity">{quantity}</span>
-        <button onClick={addQuantity}>+</button>
-    </div>
+        <div className="quantityContainer">
+            <button onClick={subtractQuantity}>-</button>
+            <span className="quantity">{quantity}</span>
+            <button onClick={addQuantity}>+</button>
+        </div>
     );
 }
 

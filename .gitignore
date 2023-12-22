@@ -4,6 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
+/.idea
+/.vscode
+/stripe-server/node_modules
+/stripe-server/.env
+/stripe-server/.env.local
+/stripe-server/.env.development.local
+/stripe-server/.env.test.local
+/stripe-server/.env.production.local
 
 # testing
 /coverage

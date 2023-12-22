@@ -2,7 +2,7 @@ import Filter from "./Filter";
 
 function AllCategories() {
     return ( 
-        <div>
+        <div className="allGenreContainer">
             {['Все категории', 'Триллер', 'Медицина', 'Детектив', 'Драма, мелодрама', 'Стиль', 'Биография', 'Фантастика']
             .map((genre, index) => (
                 <Filter key={index} genre={genre}/>

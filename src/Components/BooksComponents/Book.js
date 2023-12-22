@@ -9,13 +9,15 @@ function Book({book}) {
     const dispatch = useDispatch();
 
     return ( 
-        <div>
+        <div className="booksItem">
             <img className='bookImg' src={`./${book.img}.webp`} alt={book.img}></img>
             <h4>{book.name}</h4>
             <p>{book.author}</p>
-            <span>₱ {book.price*quantity}</span>
-            <ChangeQuantity quantity={quantity} setQuantity={setQuantity}/>
-            <button onClick={() => {dispatch(addItemToCart({book, quantity}))}}>Add to cart</button>
+            <div className="btn-cont">
+                <span className="bookPrice">₱ {book.price*quantity}</span>
+                <ChangeQuantity quantity={quantity} setQuantity={setQuantity}/>
+                <button onClick={() => {dispatch(addItemToCart({book, quantity}))}}>в корзину</button>
+            </div>
         </div>
     );
 }
