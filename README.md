@@ -39,7 +39,7 @@ npm start
 
 7. Необходимо создать .env файл в корне проекта со следующим содержимым:
 REACT_APP_STRIPE_KEY=YOUR_KEY
-REACT_APP_STRIPE_SECRET_KEY=YOUR_KEY
+REACT_APP_AUTH0_DOMAIN=YOUR_DOMAIN
 Здесь указываются ключи доступа к Stripe. 
  
 ## Компоненты 
