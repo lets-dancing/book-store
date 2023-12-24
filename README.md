@@ -34,13 +34,13 @@ npm start
 
 5. Для работы Stripe и Auth0 необходимо создать свои аккаунты и получить ключи доступа. Замените их в src/Stripe/StripeContainer.js и src/index.js соответственно.
 
-6. Для работы Stripe также необходимо запустить stripe-server. Склонируйте репозиторий и выполните команду
-npm start
+6. Для работы Stripe также необходимо запустить stripe-server командой _node index.js_ предварительно установив зависимости командой _npm i stripe express cors dotenv body-parser_  
 Сервер будет доступен по адресу http://localhost:8080.
 
 7. Необходимо создать .env файл в корне проекта со следующим содержимым:
-REACT_APP_STRIPE_KEY=YOUR_KEY  
-REACT_APP_AUTH0_DOMAIN=YOUR_DOMAIN  
+STRIPE_SECRET_TEST=YOUR_KEY  
+AUTH0_DOMAIN=YOUR_DOMAIN  
+AUTH0_CLIENTID=YOUR_CLIENTID  
 Здесь указываются ключи доступа к Stripe. 
  
 ## Компоненты 
