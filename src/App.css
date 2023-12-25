@@ -282,3 +282,62 @@ nav {
 .StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
 }
+.hamburger, .hamburgerMenu {
+    display: none;
+}
+
+@media all and (max-width: 1350px) {
+    .hamburger, .hamburgerMenu {
+        display: block;
+    }
+    .hamburger button {
+        background-color: rgb(87, 165, 165);
+        font-family: 'Montserrat Alternates', sans-serif;
+        border: none;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .allGenreContainer {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    .selectedGenre, .staticGenre {
+        padding: 10px;
+        margin: 0;
+    }
+    .hamburgerMenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: fit-content;
+      background-color: rgb(124, 184, 118);
+      z-index: 10;
+      transition: all 0.3s ease;
+      transform: translateX(100%);
+    }
+    .hamburgerMenu.show {
+      transform: translateX(0);
+    }
+    .wideDisplay {
+        display: none;
+    }
+    .bookLogo {
+        width: 70px;
+        margin-top: 10px;
+    }
+    .cartIcon {
+        width: 28px;
+        margin-top: 20px;
+    }
+    .loginBtn {
+        width: 28px;
+        height: 28px;
+        margin-top: 15px;
+    }
+    .logoutBtn {
+        width: 28px;
+        height: 28px;
+        margin-top: 15px;
+    }
+}

@@ -2,7 +2,7 @@ import {
     BrowserRouter as Router, 
     Routes, 
     Route, 
-    Link 
+    Link
 } from "react-router-dom";
 import Search from "../Search/Search";
 import Books from "../BooksComponents/Books";
@@ -11,10 +11,29 @@ import Login from "../Auth/Login";
 import { useAuth0 } from "@auth0/auth0-react";
 import Logout from "../Auth/Logout";
 import AllCategories from "../Filter/AllCategories";
-import Book from "../BooksComponents/Book";
+import { useEffect, useRef, useState } from "react";
 
 function NavBar() {
     const {isAuthenticated, isLoading} = useAuth0();
+    const [showLinks, setShowLinks] = useState(false);
+    const ref = useRef(document);
+
+    function closeMenu() {
+        setShowLinks(false);
+    }
+
+    useEffect(() => {
+        const handleClick = (e) => {
+            if (e.target.closest('.hamburgerMenu') || e.target.closest('.hamburger')) return;
+            setShowLinks(false);
+        }
+        const el = ref.current;
+        el.addEventListener('click', handleClick);
+        return () => {
+            el.removeEventListener('click', handleClick);
+        }
+        
+    }, []);
 
     if(isLoading) 
         return (
@@ -37,9 +56,24 @@ function NavBar() {
                 </nav>
             
             <Routes>
-                <Route path="/" element={(<div><AllCategories /> <Books /></div>)} />
+                <Route path="/" element={(
+                <div>
+                    <div className="wideDisplay">
+                        <AllCategories />
+                    </div>
+                    <div className="hamburger" ref={ref}>
+                        <button onClick={() => setShowLinks(!showLinks)}>Выбрать категорию</button>
+                    </div>
+                    {showLinks && (
+                    <div className={`hamburgerMenu ${showLinks ? 'show' : ''}`} onClick={closeMenu}>
+                        <AllCategories  />
+                    </div>
+                    )}
+                    <Books />
+                </div>
+                )} />
+
                 <Route path="/cart" element={<Cart />} />
-                <Route path="/book/:id" element={<Book />} />
             </Routes>
             </div>
         </Router>
