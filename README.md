@@ -39,8 +39,6 @@ npm start
 
 7. Необходимо создать .env файл в корне проекта со следующим содержимым:
 STRIPE_SECRET_TEST=YOUR_KEY  
-AUTH0_DOMAIN=YOUR_DOMAIN  
-AUTH0_CLIENTID=YOUR_CLIENTID  
 Здесь указываются ключи доступа к Stripe. 
  
 ## Компоненты 
