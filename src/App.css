@@ -98,6 +98,37 @@ nav {
     border-radius: 20px;
     cursor: pointer;
 }
+.bookDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.bookDetails img {
+    width: 300px;
+    height: 450px;
+    border-radius: 20px;
+}
+.bookDetails h1 {
+    font-family: 'Marck Script', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+}
+.bookDetails p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+.bookDetails h4 {
+    position: absolute;
+    left: 5%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
 .booksContainer {
     font-family: 'Montserrat Alternates', sans-serif;
     display: flex;
@@ -206,6 +237,35 @@ nav {
     justify-content: space-around;
     width: 100%;
 }
+.cartItem button {
+    width: 30px;
+    height: 30px;
+    background-color: #7a77;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cartItem button:active {
+    scale: 95%;
+}
+.cart-btn-cont {
+    width: 80%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.delIcon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.delIcon:hover {
+    cursor: pointer;
+}
 .cartField {
     display: flex;
     flex-direction: column;
@@ -221,6 +281,12 @@ nav {
     text-decoration: underline;
 }
 .cartField h3 {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px;
+}
+.cartField h4 {
     font-size: 15px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
@@ -339,5 +405,14 @@ nav {
         width: 28px;
         height: 28px;
         margin-top: 15px;
+    }
+    .booksContainer {
+        justify-content: center;
+    }
+    .bookDetails img {
+        margin-top: 50px;
+    }
+    .cartItems {
+        justify-content: center;
     }
 }

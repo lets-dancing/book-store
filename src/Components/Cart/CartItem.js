@@ -23,12 +23,14 @@ function CartItem({cartItem}) {
             <h2>{cartItem.bookName}</h2>
             <p>{cartItem.bookAuthor}</p>
             <p>{cartItem.quantity}{declension(cartItem.quantity, [' экземпляр', ' экземпляра', ' экземпляров'])}</p>
-            <div>
-                <button onClick={() => {dispatch(decreaseQuantity(cartItem))}}>-</button>
-                <button onClick={() => {dispatch(increaseQuantity(cartItem))}}>+</button>
+            <div className="cart-btn-cont">
+                <div>
+                    <button onClick={() => {dispatch(decreaseQuantity(cartItem))}}>-</button>
+                    <button onClick={() => {dispatch(increaseQuantity(cartItem))}}>+</button>
+                </div>
+                <p>Стоимость: ₱  {calculatePrice()}</p>
+                <img onClick={() => {dispatch(removeItemFromCart(cartItem))}} className="delIcon" src={`./removeIcon.png`} alt="delIcon"/>
             </div>
-            <p>Стоимость: ₱  {calculatePrice()}</p>
-            <img onClick={() => {dispatch(removeItemFromCart(cartItem))}} className="delIcon" src={`./removeIcon.png`} alt="delIcon"/>
         </div>
     );
 }
