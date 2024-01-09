@@ -19,7 +19,7 @@ function Book({book}) {
             <Link to="/bookDetails">
                 <img className='bookImg' src={`./${book.img}.webp`} alt={book.img}></img>
             </Link>
-            <h4>{book.name}</h4>
+            <h4 style={{fontSize: book.name.length > 65 ? '15px' : '20px'}}>{book.name}</h4>
             <p>{book.author}</p>
             <div className="btn-cont">
                 <span className="bookPrice">₱ {book.price*quantity}</span>
