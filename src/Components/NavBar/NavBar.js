@@ -33,7 +33,6 @@ function NavBar() {
         return () => {
             el.removeEventListener('click', handleClick);
         }
-        
     }, []);
 
     if(isLoading) 

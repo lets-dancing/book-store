@@ -5,7 +5,6 @@ body {
 .App {
     display: flex;
     flex-direction: column;
-
 }
 .bookLogo {
     width: 100px;
@@ -29,6 +28,17 @@ nav {
 .navBarIcons {
     display: flex;
     
+}
+.favoriteIcon {
+    height: 40px;
+    margin-top: 15%;
+    margin-right: 10px;
+}
+.favoriteIcon:hover {
+    cursor: pointer;
+}
+.favoriteIcon:active {
+    scale: 95%;
 }
 .loginBtn {
     width: 40px;
@@ -139,8 +149,8 @@ nav {
 .booksItem {
     position: relative;
     display: inline-block;
-    width: 200px;
-    height: 450px;
+    width: 250px;
+    height: 490px;
     margin-bottom: 50px;
     margin-right: 10px;
     text-align: center;
@@ -388,13 +398,21 @@ nav {
     .wideDisplay {
         display: none;
     }
+    .searchInput {
+        width: 150px;
+    }
     .bookLogo {
-        width: 70px;
-        margin-top: 10px;
+        width: 50px;
+        margin-top: 20px;
     }
     .cartIcon {
         width: 28px;
         margin-top: 20px;
+    }
+    .favoriteIcon {
+        width: 28px;
+        margin-top: 15px;
+        margin-right: 5px;
     }
     .loginBtn {
         width: 28px;

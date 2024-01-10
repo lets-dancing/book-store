@@ -25,8 +25,7 @@ export const booksSlice = createSlice ({
     }
 })
 
-export const { filteredGenre } = booksSlice.actions;
+export const { filteredGenre, showDetails } = booksSlice.actions;
 export const getSelectGenre = (state) => state.books.selectedGenre;
-export const { showDetails } = booksSlice.actions;
 export const getSelectedBook = (state) => state.books.selectedBook;
 export default booksSlice.reducer;

@@ -20,7 +20,7 @@ function Books() {
                 return book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                        book.author.toLowerCase().includes(searchTerm.toLowerCase());
             })
-            .map((book, index) => <Book key={index} book={book}/>)
+            .map((book, index) => <Book key={index} book={book} />)
             }
         </div>
     );
