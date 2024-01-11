@@ -19,7 +19,7 @@ export const CheckoutForm = ({setShowCheckoutForm}) => {
       try {
         const { id } = paymentMethod;
         const response = await axios.post(
-          "http://localhost:8080/stripe/charge",
+          "https://store-for-book.netlify.app/stripe/charge",
           {
             amount: 999,
             id: id,
