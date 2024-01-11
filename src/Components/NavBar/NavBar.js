@@ -12,7 +12,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Logout from "../Auth/Logout";
 import AllCategories from "../Filter/AllCategories";
 import { useEffect, useRef, useState } from "react";
-import BookDetails from "../BooksComponents/BookDetails";
 
 function NavBar() {
     const {isAuthenticated, isLoading} = useAuth0();
@@ -74,7 +73,6 @@ function NavBar() {
                 )} />
 
                 <Route path="/cart" element={<Cart />} />
-                <Route path="/bookDetails" element={<BookDetails />} />
             </Routes>
             </div>
         </Router>

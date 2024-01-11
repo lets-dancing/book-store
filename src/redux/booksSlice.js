@@ -11,7 +11,8 @@ export const booksSlice = createSlice ({
             author: "",
             genre: "",
             description: "",
-            image: ""
+            price: 0,
+            img: ""
         }
     },
     reducers: {
@@ -19,8 +20,7 @@ export const booksSlice = createSlice ({
             state.selectedGenre = action.payload;
         },
         showDetails: (state, action) => {
-            state.selectedBook = action.payload.book;
-            state.selectedBook.image = action.payload.image;
+            state.selectedBook = action.payload;
         }
     }
 })
