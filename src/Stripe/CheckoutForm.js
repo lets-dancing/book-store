@@ -45,7 +45,7 @@ export const CheckoutForm = ({setShowCheckoutForm}) => {
       {!messageSuccess ?
     <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
       <CardElement className="cardElement"/>
-      <button>Pay</button>
+      <button>Оплатить</button>
     </form>
     :
     <div>
