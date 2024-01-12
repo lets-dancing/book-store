@@ -4,6 +4,7 @@ import { getSelectGenre } from '../../redux/booksSlice';
 import { getSelectSearchTerm } from '../../redux/searchSlice';
 import Book from './Book';
 
+
 function Books({showModal}) {
     const selectedGenre = useSelector(getSelectGenre);
     const searchTerm = useSelector(getSelectSearchTerm);
