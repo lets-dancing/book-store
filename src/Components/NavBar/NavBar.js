@@ -12,6 +12,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Logout from "../Auth/Logout";
 import AllCategories from "../Filter/AllCategories";
 import { useEffect, useRef, useState } from "react";
+import Carousel from "../Carousel/Carousel";
 
 function NavBar() {
     const {isAuthenticated, isLoading} = useAuth0();
@@ -23,6 +24,7 @@ function NavBar() {
     }
 
     useEffect(() => {
+        document.body.style.overflowX = 'hidden';
         const handleClick = (e) => {
             if (e.target.closest('.hamburgerMenu') || e.target.closest('.hamburger')) return;
             setShowLinks(false);
@@ -57,6 +59,7 @@ function NavBar() {
             <Routes>
                 <Route path="/" element={(
                 <div>
+                    <Carousel />
                     <div className="wideDisplay">
                         <AllCategories />
                     </div>
@@ -68,6 +71,7 @@ function NavBar() {
                         <AllCategories  />
                     </div>
                     )}
+
                     <Books />
                 </div>
                 )} />

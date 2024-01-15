@@ -8,6 +8,7 @@ function Modal ( {isOpen, setIsOpen, children} ) {
         }
     }
     useEffect(() => {
+        document.body.style.overflowX = isOpen ? 'hidden' : 'auto';
         const handleKeyDown = (e) => {
             if (e.key === 'Escape') {
             setIsOpen(false);
@@ -15,7 +16,7 @@ function Modal ( {isOpen, setIsOpen, children} ) {
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [setIsOpen]);
+    }, [setIsOpen, isOpen]);
 
     const handlers = useSwipeable({
         onSwipedRight: () => setIsOpen(false),
