@@ -97,6 +97,9 @@ nav {
 .bookImg {
     width: 100px;
 }
+.bookImg:hover {
+    cursor: pointer;
+}
 .searchInput {
     width: 50%;
     height: 30px;
@@ -145,6 +148,10 @@ nav {
     width: 50%;
     height: 100%;
     border-radius: 20px;
+}
+.carouselImg:hover {
+    cursor: pointer;
+    scale: 102%;
 }
 .carouselImg  img {
     width: 250px;
@@ -568,5 +575,56 @@ nav {
     }
     .cartItems {
         justify-content: center;
+    }
+    .carouselContainer {
+        width: 90%;
+    }
+    .carouselItem {
+        width: 90%;
+    }
+    .carouselImg {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .carouselContainer {
+        width: 95%;
+    }
+    .carouselItem {
+        width: 95%;
+        height: 300px;
+    }
+    .carouselImg img {
+        width: 200px;
+    }
+    .carouselTitle h1 {
+        font-size: 25px;
+    }
+    .carouselTitle h4 {
+        font-size: 18px;
+    }
+    .carouselBtnR, .carouselBtnL{
+        display: none;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .carouselContainer {
+        width: 98%;
+        padding: 10px;
+    }
+    .carouselItem {
+        width: 98%;
+        height: 250px;
+    }
+    .carouselImg img {
+        width: 150px;
+    }
+    .carouselTitle h1 {
+        font-size: 20px;
+    }
+    .carouselTitle h4 {
+        font-size: 15px;
     }
 }

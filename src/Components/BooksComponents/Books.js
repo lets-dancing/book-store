@@ -5,7 +5,7 @@ import { getSelectSearchTerm } from '../../redux/searchSlice';
 import Book from './Book';
 
 
-function Books({showModal}) {
+function Books() {
     const selectedGenre = useSelector(getSelectGenre);
     const searchTerm = useSelector(getSelectSearchTerm);
 
@@ -21,7 +21,7 @@ function Books({showModal}) {
                 return book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                        book.author.toLowerCase().includes(searchTerm.toLowerCase());
             })
-            .map((book, index) => <Book key={index} book={book} showModal={showModal}/>)
+            .map((book, index) => <Book key={index} book={book}/>)
             }
         </div>
     );
