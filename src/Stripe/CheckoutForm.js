@@ -43,14 +43,15 @@ export const CheckoutForm = ({setShowCheckoutForm}) => {
   return (
     <div className="paymentService">
       {!messageSuccess ?
-    <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
-      <CardElement className="cardElement"/>
-      <button>Оплатить</button>
-    </form>
-    :
-    <div>
-      <h1>Оплата прошла успешно!</h1>
+        <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
+          <CardElement className="cardElement"/>
+          <button>Оплатить</button>
+        </form>
+      :
+        <div>
+          <h1>Оплата прошла успешно!</h1>
+        </div>
+      }
     </div>
-    }
-    </div>
-)};
+  );
+};

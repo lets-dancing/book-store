@@ -4,11 +4,9 @@ require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST);
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
-
 app.post("/stripe/charge", cors(), async (req, res) => {
   console.log("stripe-routes.js 9 | route reached", req.body);
   let { amount, id } = req.body;
@@ -38,7 +36,6 @@ app.post("/stripe/charge", cors(), async (req, res) => {
     });
   }
 });
-
 app.listen(process.env.PORT || 8080, () => {
   console.log("Server started...");
 });

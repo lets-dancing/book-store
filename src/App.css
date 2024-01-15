@@ -33,7 +33,6 @@ body {
     .closeModalIcon:active {
         scale: 95%;
     }
-
 .bookLogo {
     width: 100px;
     border-radius: 20px;
@@ -55,7 +54,6 @@ nav {
 }
 .navBarIcons {
     display: flex;
-    
 }
 .favoriteIcon {
     height: 40px;
@@ -437,7 +435,6 @@ nav {
 }
 .paymentService form {
     display: flex;
-    
 }
 .paymentService form button{
     margin: 15px;
@@ -472,7 +469,6 @@ nav {
 .hamburger, .hamburgerMenu {
     display: none;
 }
-
 @media all and (max-width: 1350px) {
     .hamburger, .hamburgerMenu {
         display: block;
@@ -586,7 +582,6 @@ nav {
         width: 90%;
     }
 }
-
 @media all and (max-width: 800px) {
     .carouselContainer {
         width: 95%;
@@ -608,7 +603,6 @@ nav {
         display: none;
     }
 }
-
 @media all and (max-width: 500px) {
     .carouselContainer {
         width: 98%;

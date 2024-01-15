@@ -12,7 +12,7 @@ function Cart() {
     const [showCheckoutForm, setShowCheckoutForm] = useState(false);
     const isAuthenticated = useAuth0()?.isAuthenticated;
 
-    return ( 
+    return (
         <div className="cartField">
             <Link to="/"><h4>в каталог</h4></Link>
             <h1>Корзина</h1>

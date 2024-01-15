@@ -1,10 +1,8 @@
 import { useSelector } from 'react-redux';
 import { getSelectedBook } from '../../redux/booksSlice';
 
-
 function BookDetails() {
   const selectedBook = useSelector(getSelectedBook);
-  
   return (
     <div className="bookDetails" >
       <div className='bookDetailsHeader'>

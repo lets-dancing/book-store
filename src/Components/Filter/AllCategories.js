@@ -1,5 +1,4 @@
 import Filter from "./Filter";
-
 function AllCategories() {
     return ( 
         <div className="allGenreContainer">
@@ -10,5 +9,4 @@ function AllCategories() {
         </div>
     );
 }
-
 export default AllCategories;

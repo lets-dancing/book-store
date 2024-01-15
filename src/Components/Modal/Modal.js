@@ -1,17 +1,18 @@
 import { useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
-function Modal ( {isOpen, setIsOpen, children} ) {
+function Modal({ isOpen, setIsOpen, children }) {
     const closeModal = e => {
         if (e.target.classList.contains('overlay')) {
-            setIsOpen(false)
+            setIsOpen(false);
         }
     }
+    
     useEffect(() => {
         document.body.style.overflowX = isOpen ? 'hidden' : 'auto';
         const handleKeyDown = (e) => {
             if (e.key === 'Escape') {
-            setIsOpen(false);
+                setIsOpen(false);
             }
         };
         document.addEventListener('keydown', handleKeyDown);
@@ -21,7 +22,7 @@ function Modal ( {isOpen, setIsOpen, children} ) {
     const handlers = useSwipeable({
         onSwipedRight: () => setIsOpen(false),
         onSwipedLeft: () => setIsOpen(false)
-      });
+    });
 
     if (!isOpen) return null;
 

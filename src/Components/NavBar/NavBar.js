@@ -1,7 +1,7 @@
-import { 
-    BrowserRouter as Router, 
-    Routes, 
-    Route, 
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
     Link
 } from "react-router-dom";
 import Search from "../Search/Search";
@@ -15,13 +15,9 @@ import { useEffect, useRef, useState } from "react";
 import Carousel from "../Carousel/Carousel";
 
 function NavBar() {
-    const {isAuthenticated, isLoading} = useAuth0();
+    const { isAuthenticated, isLoading } = useAuth0();
     const [showLinks, setShowLinks] = useState(false);
     const ref = useRef(document);
-
-    function closeMenu() {
-        setShowLinks(false);
-    }
 
     useEffect(() => {
         document.body.style.overflowX = 'hidden';
@@ -36,15 +32,14 @@ function NavBar() {
         }
     }, []);
 
-    if(isLoading) 
+    if (isLoading)
         return (
             <div className="loader">
-            <h3>Загрузка...</h3>
-            <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <h3>Загрузка...</h3>
+                <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             </div>
         )
-
-    return ( 
+    return (
         <Router>
             <div className="container">
                 <nav>
@@ -55,7 +50,6 @@ function NavBar() {
                         {isAuthenticated ? <Logout /> : <Login />}
                     </div>
                 </nav>
-            
             <Routes>
                 <Route path="/" element={(
                 <div>
@@ -67,20 +61,17 @@ function NavBar() {
                         <button onClick={() => setShowLinks(!showLinks)}>Выбрать категорию</button>
                     </div>
                     {showLinks && (
-                    <div className={`hamburgerMenu ${showLinks ? 'show' : ''}`} onClick={closeMenu}>
+                    <div className={`hamburgerMenu ${showLinks ? 'show' : ''}`}>
                         <AllCategories  />
                     </div>
                     )}
-
                     <Books />
                 </div>
                 )} />
-
                 <Route path="/cart" element={<Cart />} />
             </Routes>
             </div>
         </Router>
     );
 }
-
 export default NavBar;

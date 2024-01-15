@@ -22,7 +22,7 @@
 ## Установка 
  
 1. Склонируйте репозиторий
-git clone https://github.com/username/book-store.git
+git clone https://github.com/lets-dancing/book-store.git
 
 2. Установите зависимости
 npm install
@@ -48,8 +48,9 @@ STRIPE_SECRET_TEST=YOUR_KEY
 - AllCategories.js - фильтр по жанрам 
 - Books.js - отображение книг 
 - Book.js - отдельная книга 
-- Cart.js - корзина 
+- Cart.js - корзина
 - CartItem.js - товар в корзине 
+- Carousel.js - карусель 
 - ChangeQuantity.js - изменение количества товара 
 - CheckoutForm.js - форма оплаты Stripe 
 - StripeContainer.js - интеграция Stripe 

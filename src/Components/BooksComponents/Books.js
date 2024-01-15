@@ -4,12 +4,10 @@ import { getSelectGenre } from '../../redux/booksSlice';
 import { getSelectSearchTerm } from '../../redux/searchSlice';
 import Book from './Book';
 
-
 function Books() {
     const selectedGenre = useSelector(getSelectGenre);
     const searchTerm = useSelector(getSelectSearchTerm);
-
-    return ( 
+    return (
         <div className='booksContainer'>
             {booksData
             .filter(book => {

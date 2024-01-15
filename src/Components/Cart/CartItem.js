@@ -1,13 +1,11 @@
 import { useDispatch } from "react-redux";
 import { removeItemFromCart, increaseQuantity, decreaseQuantity } from "../../redux/cartSlice";
 
-
 function CartItem({cartItem}) {
     const dispatch = useDispatch();
     const calculatePrice = () => {
         return cartItem.quantity * cartItem.bookPrice;
     }
-
     function declension(n, text_forms) {  
         n = Math.abs(n) % 100; 
         let n1 = n % 10;
@@ -16,7 +14,6 @@ function CartItem({cartItem}) {
         if (n1 === 1) { return text_forms[0]; }
         return text_forms[2];
     };
-    
     return ( 
         <div className="cartItem">
             <img className="cartItemCover" src={`./${cartItem.bookImage}.webp`} alt={cartItem.bookImage}></img>
@@ -34,5 +31,4 @@ function CartItem({cartItem}) {
         </div>
     );
 }
-
 export default CartItem;

@@ -3,7 +3,6 @@ function ChangeQuantity({quantity, setQuantity}) {
         const newQuantity = quantity + 1;
         setQuantity(newQuantity);
     }
-    
     const subtractQuantity = () => {
         if( quantity <= 1) {
             return;
@@ -19,5 +18,4 @@ function ChangeQuantity({quantity, setQuantity}) {
         </div>
     );
 }
-
 export default ChangeQuantity;

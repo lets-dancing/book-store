@@ -6,7 +6,6 @@ import BookDetails from "./BookDetails";
 import Modal from "../Modal/Modal";
 import { showDetails } from "../../redux/booksSlice";
 
-
 function Book({book}) {
     const [quantity, setQuantity] = useState(1);
     const [isFavorite, setIsFavorite] = useState(false);
@@ -17,7 +16,7 @@ function Book({book}) {
         setIsOpen(true);
         dispatch(showDetails(book));
     }
-    
+
     function toggleFavorite() {
         setIsFavorite(!isFavorite);
     }

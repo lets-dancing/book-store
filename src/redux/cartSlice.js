@@ -12,7 +12,6 @@ export const cartSlice = createSlice({
                 state.cartItems[itemIndex].quantity += action.payload.quantity;
                 state.cartItems[itemIndex].totalPrice += action.payload.book.price * action.payload.quantity;
             }
-
             else {
                 state.cartItems.push({
                     bookId: action.payload.book.id,
