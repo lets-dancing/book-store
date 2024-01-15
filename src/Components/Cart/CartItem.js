@@ -1,3 +1,8 @@
+// Компонент CartItem для отображения информации о товаре в корзине.
+// Он позволяет увеличивать и уменьшать количество товара, удалять его из корзины
+// и вычислять общую стоимость товара. Также использует функцию declension
+// для правильного склонения слова "экземпляр" в зависимости от количества.
+
 import { useDispatch } from "react-redux";
 import { removeItemFromCart, increaseQuantity, decreaseQuantity } from "../../redux/cartSlice";
 
@@ -6,8 +11,9 @@ function CartItem({cartItem}) {
     const calculatePrice = () => {
         return cartItem.quantity * cartItem.bookPrice;
     }
+    // Функция склонения, которая возвращает правильную форму слова в зависимости от числительного
     function declension(n, text_forms) {  
-        n = Math.abs(n) % 100; 
+        n = Math.abs(n) % 100;
         let n1 = n % 10;
         if (n > 10 && n < 20) { return text_forms[2]; }
         if (n1 > 1 && n1 < 5) { return text_forms[1]; }

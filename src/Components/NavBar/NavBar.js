@@ -1,3 +1,7 @@
+// Компонент NavBar использует React Router для навигации и Auth0 для аутентификации.
+// Он содержит ссылки на главную страницу, корзину и вход/выход.
+// Также реализован поиск, карусель книг и динамическое отображение категорий.
+// В коде применяется хук состояния для управления видимостью ссылок и эффект для обработки кликов вне меню.
 import {
     BrowserRouter as Router,
     Routes,
@@ -13,25 +17,24 @@ import Logout from "../Auth/Logout";
 import AllCategories from "../Filter/AllCategories";
 import { useEffect, useRef, useState } from "react";
 import Carousel from "../Carousel/Carousel";
-
 function NavBar() {
     const { isAuthenticated, isLoading } = useAuth0();
     const [showLinks, setShowLinks] = useState(false);
     const ref = useRef(document);
 
-    useEffect(() => {
-        document.body.style.overflowX = 'hidden';
-        const handleClick = (e) => {
-            if (e.target.closest('.hamburgerMenu') || e.target.closest('.hamburger')) return;
-            setShowLinks(false);
-        }
-        const el = ref.current;
-        el.addEventListener('click', handleClick);
+useEffect(() => {
+    document.body.style.overflowX = 'hidden';
+    const handleClick = (e) => {
+        if (e.target.closest('.hamburgerMenu') || e.target.closest('.hamburger')) return;
+        setShowLinks(false);
+    }
+    const el = ref.current;
+    el.addEventListener('click', handleClick);
         return () => {
             el.removeEventListener('click', handleClick);
         }
     }, []);
-
+    // Этот фрагмент кода отображает индикатор загрузки, если данные все еще загружаются.
     if (isLoading)
         return (
             <div className="loader">

@@ -1,12 +1,19 @@
+// Этот код создает сервер Express, который обрабатывает платежи через Stripe API.
+// Он использует переменные окружения для конфигурации, принимает платежные данные через POST запрос,
+// и обрабатывает платежи с помощью Stripe. В случае успешного платежа возвращает сообщение об успехе,
+// в случае ошибки - сообщение о неудаче. Сервер слушает порт, указанный в переменной окружения PORT, или 8080 по умолчанию.
+
 const express = require("express");
 const app = express();
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST);
 const bodyParser = require("body-parser");
 const cors = require("cors");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
+
 app.post("/stripe/charge", cors(), async (req, res) => {
   console.log("stripe-routes.js 9 | route reached", req.body);
   let { amount, id } = req.body;
@@ -21,7 +28,7 @@ app.post("/stripe/charge", cors(), async (req, res) => {
       automatic_payment_methods: {
         enabled: true,
         allow_redirects: 'never',
-    },
+      },
     });
     console.log("stripe-routes.js 19 | payment", payment);
     res.json({
@@ -36,6 +43,7 @@ app.post("/stripe/charge", cors(), async (req, res) => {
     });
   }
 });
+
 app.listen(process.env.PORT || 8080, () => {
   console.log("Server started...");
 });

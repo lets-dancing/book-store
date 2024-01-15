@@ -12,11 +12,17 @@ function Carousel() {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
 
+    // Функция showModal принимает объект книги и выполняет два действия:
+    // 1. Устанавливает состояние модального окна в "открыто" (isOpen в true).
+    // 2. Вызывает действие showDetails с передачей объекта книги для отображения деталей этой книги.
     function showModal(book) {
         setIsOpen(true);
         dispatch(showDetails(book));
     }
 
+    // Этот эффект используется для создания бесконечного слайдера, который автоматически переключает слайды каждые 4 секунды.
+    // Когда достигается последний слайд, слайдер возвращается к первому.
+    // При размонтировании компонента интервал очищается, чтобы избежать утечек памяти.
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveSlideIndex(prevIndex =>
@@ -33,6 +39,7 @@ function Carousel() {
                 <Modal setIsOpen={setIsOpen} isOpen={isOpen}>
                     <BookDetails setIsOpen={setIsOpen} isOpen={isOpen} />
                 </Modal>}
+            {/* Компонент ReactSimplyCarousel используется для создания карусели в приложении на React */}
             <ReactSimplyCarousel
                 activeSlideIndex={activeSlideIndex}
                 onRequestChange={setActiveSlideIndex}
@@ -94,7 +101,7 @@ function Carousel() {
                     activeItemBtnProps: {
                         style: {
                             marginTop: 10,
-                            marginLeft: 10,
+                            marginLeft: 10, 
                             height: 18,
                             width: 18,
                             borderRadius: "50%",

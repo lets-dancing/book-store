@@ -1,3 +1,5 @@
+// Компонент BookDetails для отображения детальной информации о выбранной книге.
+// Использует хук useSelector для доступа к состоянию Redux и получения данных выбранной книги.
 import { useSelector } from 'react-redux';
 import { getSelectedBook } from '../../redux/booksSlice';
 

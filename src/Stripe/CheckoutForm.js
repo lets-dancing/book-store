@@ -1,3 +1,8 @@
+// Компонент CheckoutForm использует Stripe API для обработки платежей.
+// Пользователь вводит данные своей карты, и при успешном создании платежного метода
+// отправляется запрос на сервер для выполнения транзакции. При успешной оплате
+// отображается сообщение об успешной оплате и форма скрывается.
+
 import React, { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import axios from "axios";

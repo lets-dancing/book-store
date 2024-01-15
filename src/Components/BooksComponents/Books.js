@@ -1,3 +1,5 @@
+// Компонент Books, который использует Redux для фильтрации и отображения списка книг.
+// Этот компонент фильтрует книги по выбранному жанру и поисковому запросу, перед тем как отобразить их.
 import { useSelector } from 'react-redux';
 import booksData from '../../data/booksData';
 import { getSelectGenre } from '../../redux/booksSlice';
