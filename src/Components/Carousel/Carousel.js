@@ -5,6 +5,7 @@ import { showDetails } from '../../redux/booksSlice';
 import { useDispatch } from 'react-redux';
 import Modal from '../Modal/Modal';
 import BookDetails from '../BooksComponents/BookDetails';
+import ParticlesJS from '../ParticlesJS/ParticlesJS.js';
 
 function Carousel() {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -34,6 +35,9 @@ function Carousel() {
 
     return (
         <div className='carouselContainer'>
+            <div className="particles-js">
+                <ParticlesJS />
+            </div>
             <h1>Бестселлеры</h1>
             {isOpen &&
                 <Modal setIsOpen={setIsOpen} isOpen={isOpen}>
@@ -60,7 +64,7 @@ function Carousel() {
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
-                        backgroundColor: "#f7f7f7",
+                        backgroundColor: "rgb(0,0,0,0)",
                         border: 0,
                         width: 80,
                         height: 80,
@@ -77,7 +81,7 @@ function Carousel() {
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
-                        backgroundColor: "#f7f7f7",
+                        backgroundColor: "rgb(0,0,0,0)",
                         border: 0,
                         marginLeft: '50px',
                         width: 80,
