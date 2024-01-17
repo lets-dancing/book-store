@@ -37,7 +37,7 @@ npm start
 6. Для работы Stripe также необходимо запустить stripe-server командой _node index.js_ предварительно установив зависимости командой _npm i stripe express cors dotenv body-parser_  
 Сервер будет доступен по адресу http://localhost:8080.
 
-7. Необходимо создать .env файл в корне проекта со следующим содержимым:
+7. Необходимо создать .env файл в корне папки /stripe-server со следующим содержимым:
 STRIPE_SECRET_TEST=YOUR_KEY  
 Здесь указываются ключи доступа к Stripe. 
  

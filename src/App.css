@@ -504,18 +504,18 @@ nav {
         scale: none;
     }
     .hamburgerMenu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: fit-content;
-      background-color: rgb(124, 184, 118);
-      z-index: 10;
-      transition: all 0.3s ease;
-      transform: translateX(100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: fit-content;
+        background-color: rgb(124, 184, 118);
+        z-index: 10;
+        transition: all 0.3s ease;
+        transform: translateX(100%);
     }
     .hamburgerMenu.show {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     .wideDisplay {
         display: none;
@@ -613,6 +613,15 @@ nav {
     }
     .carouselBtnR, .carouselBtnL{
         display: none;
+    }
+    .booksContainer {
+        background:none;
+    }
+    .particles-js {
+        position: fixed;
+    }
+    .booksItem {
+        background-color: rgb(247, 247, 247, 0.8);
     }
 }
 @media all and (max-width: 500px) {
