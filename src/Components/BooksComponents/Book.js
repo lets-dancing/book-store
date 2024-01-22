@@ -1,6 +1,6 @@
 // Компонент Book представляет собой элемент книги, который позволяет пользователю изменять количество,
 // добавлять книгу в корзину, отмечать как избранное и просматривать подробную информацию о книге в модальном окне.
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ChangeQuantity from "../Cart/ChangeQuantity";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../redux/cartSlice";
@@ -10,19 +10,25 @@ import { showDetails } from "../../redux/booksSlice";
 
 function Book({book}) {
     const [quantity, setQuantity] = useState(1);
-    const [isFavorite, setIsFavorite] = useState(false);
+    const [isFavorite, setIsFavorite] = useState(book.favorite);
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
 
     // Функция для отображения модального окна и отправки деталей книги в хранилище
     function showModal() {
         setIsOpen(true);
-        dispatch(showDetails(book));
+        dispatch(showDetails({...book, favorite: isFavorite}));
     }
 
     // Переключает состояние избранного (добавляет или удаляет из избранных)
+    useEffect(() => {
+        setIsFavorite(book.favorite);
+    }, [book.favorite]);
+
+    // Функция для переключения состояния избранного
     function toggleFavorite() {
         setIsFavorite(!isFavorite);
+        book.favorite = !isFavorite;
     }
 
     return (
