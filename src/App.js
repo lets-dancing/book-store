@@ -9,8 +9,8 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className='App'>
-      <button className='btnChatBot' onClick={() => setIsOpen(!isOpen)}><img src={'./gif-tg.gif'} alt='chatbot'/></button>
-      <SimpleForm isOpen={isOpen} setIsOpen={setIsOpen}/>
+      {/* <button className='btnChatBot' onClick={() => setIsOpen(!isOpen)}><img src={'./gif-tg.gif'} alt='chatbot'/></button>
+      <SimpleForm isOpen={isOpen} setIsOpen={setIsOpen}/> */}
       <NavBar />
       <BtnToTop />
     </div>
