@@ -21,11 +21,11 @@ function Book({book}) {
     // Анимация
     const bookRef = useRef();
     useLayoutEffect(() => {
-        gsap.fromTo([bookRef.current], {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 1,
+        gsap.fromTo([bookRef.current], {opacity: 0, y: 50}, {opacity: 1, y: 0, duration: 1,
             scrollTrigger: {
             trigger: bookRef.current,
             start: "top 100%",
-            end: "bottom 90%",
+            end: "bottom 70%",
             toggleActions: "restart none none none",
         }});
     }, []);
