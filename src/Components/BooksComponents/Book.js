@@ -26,7 +26,7 @@ function Book({book}) {
             trigger: bookRef.current,
             start: "top 100%",
             end: "bottom 50%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
         }});
     }, []);
 
