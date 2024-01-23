@@ -25,7 +25,7 @@ function Book({book}) {
             scrollTrigger: {
             trigger: bookRef.current,
             start: "top 100%",
-            end: "bottom 50%",
+            end: "bottom 70%",
             toggleActions: "play none none none",
         }});
     }, []);
