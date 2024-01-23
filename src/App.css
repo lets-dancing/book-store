@@ -498,6 +498,28 @@ nav {
 .btnToTop:active {
     scale: 95%;
 }
+.btnChatBot {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    border: none;
+}
+.btnChatBot:hover {
+    cursor: pointer;
+    scale: 103%;
+}
+.btnChatBot:active {
+    scale: 95%;
+}
+.modalChat {
+    position: fixed;
+    bottom: 250px;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    z-index: 1;
+}
+
 @media all and (max-width: 1350px) {
     .hamburger, .hamburgerMenu {
         display: block;
