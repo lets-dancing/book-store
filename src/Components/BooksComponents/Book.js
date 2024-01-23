@@ -24,7 +24,7 @@ function Book({book}) {
         gsap.fromTo([bookRef.current], {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 1,
             scrollTrigger: {
             trigger: bookRef.current,
-            start: "top 90%",
+            start: "top 100%",
             end: "bottom 50%",
             toggleActions: "play none none reverse",
         }});

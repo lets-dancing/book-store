@@ -481,6 +481,23 @@ nav {
 .hamburger, .hamburgerMenu {
     display: none;
 }
+.btnToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7a77;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.btnToTop:hover {
+    cursor: pointer;
+    scale: 103%;
+}
+.btnToTop:active {
+    scale: 95%;
+}
 @media all and (max-width: 1350px) {
     .hamburger, .hamburgerMenu {
         display: block;
