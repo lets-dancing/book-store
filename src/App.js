@@ -12,7 +12,7 @@ function App() {
       {/* <button className='btnChatBot' onClick={() => setIsOpen(!isOpen)}><img src={'./gif-tg.gif'} alt='chatbot'/></button>
       <SimpleForm isOpen={isOpen} setIsOpen={setIsOpen}/> */}
       <NavBar />
-      <BtnToTop />
+      {/* <BtnToTop /> */}
     </div>
   );
 }
