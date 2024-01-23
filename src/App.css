@@ -92,28 +92,6 @@ nav {
 .logoutBtn:active {
     scale: 95%;
 }
-.popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.popup button {
-    border: none;
-    background: #7a77;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
-    margin-left: 10px; 
-}
-
-.popup button:hover {
-    cursor: pointer;
-}
 .bookImg {
     width: 100px;
 }
