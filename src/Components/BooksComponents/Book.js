@@ -1,6 +1,6 @@
 // Компонент Book представляет собой элемент книги, который позволяет пользователю изменять количество,
 // добавлять книгу в корзину, отмечать как избранное и просматривать подробную информацию о книге в модальном окне.
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ChangeQuantity from "../Cart/ChangeQuantity";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../redux/cartSlice";
@@ -17,6 +17,18 @@ function Book({book}) {
     const [isFavorite, setIsFavorite] = useState(book.favorite);
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
+    
+    // Анимация
+    const bookRef = useRef();
+    useEffect(() => {
+        gsap.fromTo(bookRef.current, {opacity: 0}, {opacity: 1, duration: 1,
+            scrollTrigger: {
+            trigger: bookRef.current,
+            start: "top 100%",
+            end: "bottom 70%",
+            toggleActions: "restart none none none",
+        }});
+    }, []);
 
     // Функция для отображения модального окна и отправки деталей книги в хранилище
     function showModal() {
@@ -36,7 +48,7 @@ function Book({book}) {
     }
 
     return (
-        <div className="booksItem">
+        <div className="booksItem" ref={bookRef}>
             <img
             className="heartIcon"
             src={isFavorite ? `./redheart.png` : `./heart.png`}
