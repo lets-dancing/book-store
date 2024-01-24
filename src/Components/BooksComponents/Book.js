@@ -1,6 +1,6 @@
 // Компонент Book представляет собой элемент книги, который позволяет пользователю изменять количество,
 // добавлять книгу в корзину, отмечать как избранное и просматривать подробную информацию о книге в модальном окне.
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import ChangeQuantity from "../Cart/ChangeQuantity";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../redux/cartSlice";
