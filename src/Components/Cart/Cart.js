@@ -26,7 +26,7 @@ function Cart() {
                 {showCheckoutForm && <Stripe totalPrice={totalPrice} setShowCheckoutForm={setShowCheckoutForm}/>}
             </div>
             <div className="cartItems">
-                {cartItems.map((cartItem, index) => <CartItem key={index} cartItem={cartItem}/>)}
+                {cartItems.map((cartItem, id) => <CartItem key={id} cartItem={cartItem}/>)}
             </div>
         </div>
     );

@@ -119,8 +119,8 @@ function Carousel() {
                 centerMode
             >
                 {carouselItems
-                    .map((book, index) => (
-                        <div key={index} className="carouselItem">
+                    .map((book, id) => (
+                        <div key={id} className="carouselItem">
                             <div className="carouselImg">
                                 <img onClick={() => showModal(book)} src={`./${book.img}.webp`} alt={book.img} />
                             </div>

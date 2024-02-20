@@ -5,8 +5,8 @@ function AllCategories() {
     return ( 
         <div className="allGenreContainer">
             {['Все категории', 'Триллер', 'Медицина', 'Детектив', 'Драма, мелодрама', 'Стиль', 'Биография', 'Фантастика']
-            .map((genre, index) => (
-                <Filter key={index} genre={genre}/>
+            .map((genre, id) => (
+                <Filter key={id} genre={genre}/>
             ))}
         </div>
     );
