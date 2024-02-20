@@ -1,5 +1,4 @@
 import './App.css';
-import './loader.css'
 import NavBar from './Components/NavBar/NavBar';
 import BtnToTop from './addons/BtnToTop';
 import SimpleForm from './addons/moduleChatBot/SimpleForm';

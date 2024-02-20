@@ -2,6 +2,7 @@
 // Использует хук useSelector для доступа к состоянию Redux и получения данных выбранной книги.
 import { useSelector } from 'react-redux';
 import { getSelectedBook } from '../../redux/booksSlice';
+import './BooksComponents.css';
 
 function BookDetails() {
   const selectedBook = useSelector(getSelectedBook);

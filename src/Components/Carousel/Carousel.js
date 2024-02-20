@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import Modal from '../Modal/Modal';
 import BookDetails from '../BooksComponents/BookDetails';
 import ParticlesJS from '../ParticlesJS/ParticlesJS.js';
+import './Carousel.css';
 
 function Carousel() {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);

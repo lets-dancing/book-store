@@ -1,0 +1,37 @@
+.paymentService {
+    width: 100%;
+}
+.paymentService form {
+    display: flex;
+}
+.paymentService form button{
+    margin: 15px;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(219, 36, 36, 0.467);
+    border: none;
+    border-radius: 5px;
+}
+.paymentService form button:hover {
+    cursor: pointer;
+}
+.paymentService form button:active {
+    scale: 95%;
+}
+
+.StripeElement {
+    border: 3px solid rgba(219, 36, 36, 0.467);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgb(226, 225, 224);
+    width: 100%;
+}
+.StripeElement--focus {
+    border-color: rgba(219, 36, 36, 0.467);
+}
+.StripeElement--invalid {
+    border-color: #fa755a;
+}
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}

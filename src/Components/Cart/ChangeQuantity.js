@@ -1,4 +1,6 @@
 // Компонент React для изменения количества элемента с кнопками для увеличения и уменьшения
+import "./Cart.css";
+
 function ChangeQuantity({quantity, setQuantity}) {
     const addQuantity = () => {
         const newQuantity = quantity + 1;

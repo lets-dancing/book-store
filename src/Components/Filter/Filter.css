@@ -1,0 +1,37 @@
+.allGenreContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Marck Script', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    background-color: rgb(209, 179, 134);
+}
+.staticGenre {
+    padding: 5px;
+}
+.selectedGenre {
+    border-radius: 20px;
+    background-color: #7a77;
+    padding: 5px;
+}
+.selectedGenre:hover, .staticGenre:hover {
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    cursor: pointer;
+    scale: 120%;
+}
+@media all and (max-width: 1350px) {
+    .allGenreContainer {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    .selectedGenre, .staticGenre {
+        padding: 10px;
+        margin: 0;
+    }
+    .selectedGenre:hover, .staticGenre:hover {
+        scale: none;
+    }
+}

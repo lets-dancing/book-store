@@ -3,6 +3,7 @@
 // Компонент также подсвечивает выбранный жанр, используя соответствующий CSS класс.
 import { useDispatch, useSelector } from "react-redux";
 import { filteredGenre, getSelectGenre } from "../../redux/booksSlice";
+import './Filter.css';
 
 function Filter({genre}) {
     const dispatch = useDispatch();

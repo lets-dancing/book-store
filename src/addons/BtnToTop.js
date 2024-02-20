@@ -1,5 +1,6 @@
 // Компонент BtnToTop возвращает кнопку для прокрутки страницы наверх, которая появляется, когда пользователь прокручивает страницу более чем на 200 пикселей.
 import { useEffect, useState } from "react";
+import './BtnToTop.css';
 
 function BtnToTop() {
     const [scrollPosition, setScrollPosition] = useState(0);

@@ -9,6 +9,7 @@ import Modal from "../Modal/Modal";
 import { showDetails } from "../../redux/booksSlice";
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import './BooksComponents.css';
 
 gsap.registerPlugin(ScrollTrigger);
 

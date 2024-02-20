@@ -6,6 +6,7 @@
 import React, { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import axios from "axios";
+import "./Stripe.css";
 
 export const CheckoutForm = ({setShowCheckoutForm}) => {
   const stripe = useStripe();

@@ -5,6 +5,7 @@ import booksData from '../../data/booksData';
 import { getSelectGenre } from '../../redux/booksSlice';
 import { getSelectSearchTerm } from '../../redux/searchSlice';
 import Book from './Book';
+import './BooksComponents.css';
 
 function Books() {
     const selectedGenre = useSelector(getSelectGenre);

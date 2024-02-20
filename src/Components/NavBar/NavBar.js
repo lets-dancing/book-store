@@ -17,6 +17,8 @@ import Logout from "../Auth/Logout";
 import AllCategories from "../Filter/AllCategories";
 import { useEffect, useRef, useState } from "react";
 import Carousel from "../Carousel/Carousel";
+import './NavBar.css';
+import './loader.css';
 
 function NavBar() {
     const { isAuthenticated, isLoading } = useAuth0();

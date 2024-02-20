@@ -2,6 +2,7 @@
 // нажатием клавиши Escape или свайпом влево или вправо.
 import { useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
+import './Modal.css';
 
 function Modal({ isOpen, setIsOpen, children }) {
     // Закрывает модальное окно, если клик был совершен вне контента

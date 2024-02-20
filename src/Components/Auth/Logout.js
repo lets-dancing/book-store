@@ -1,6 +1,7 @@
 // Компонент Logout для выхода пользователя из системы с использованием Auth0
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import "./Auth.css";
 
 const Logout = () => {
     const { logout } = useAuth0();

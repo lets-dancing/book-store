@@ -1,0 +1,38 @@
+.loginBtn {
+    width: 40px;
+    height: 40px;
+    margin-top: 50%;
+    background: none;
+    border: none;
+}
+.loginBtn:hover {
+    cursor: pointer;
+}
+.loginBtn:active {
+    scale: 95%;
+}
+.logoutBtn {
+    width: 40px;
+    height: 40px;
+    margin-top: 50%;
+    background: none;
+    border: none;
+}
+.logoutBtn:hover {
+    cursor: pointer;
+} 
+.logoutBtn:active {
+    scale: 95%;
+}
+@media all and (max-width: 1350px) {
+    .loginBtn {
+        width: 28px;
+        height: 28px;
+        margin-top: 15px;
+    }
+    .logoutBtn {
+        width: 28px;
+        height: 28px;
+        margin-top: 15px;
+    }
+}

@@ -1,4 +1,6 @@
 import Filter from "./Filter";
+import './Filter.css';
+
 function AllCategories() {
     return ( 
         <div className="allGenreContainer">

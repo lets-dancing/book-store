@@ -5,6 +5,7 @@ import CartItem from "./CartItem";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "react";
 import Stripe from "../../Stripe/StripeContainer";
+import "./Cart.css";
 
 function Cart() {
     const cartItems = useSelector(getCartItems);
