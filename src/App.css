@@ -522,6 +522,24 @@ nav {
     height: 400px;
     z-index: 1;
 }
+.closeChatBot {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    width: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    scale: 2;
+    color: darkgray;
+}
+.closeChatBot:hover {
+    cursor: pointer;
+    scale: 2.5;
+}
+.closeChatBot:active {
+    scale: 2;
+}
 
 @media all and (max-width: 1350px) {
     .hamburger, .hamburgerMenu {

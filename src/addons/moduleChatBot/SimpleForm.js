@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ChatBot from 'react-simple-chatbot';
 import Review from './Review';
+import { FaTimes } from 'react-icons/fa';
 
-function SimpleForm({isOpen}) {
-
-        if (!isOpen) return null;
+function SimpleForm() {
+    const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                setIsOpen(false);
+            }
+            };
+            document.addEventListener('keydown', handleKeyDown);
+            return () => document.removeEventListener('keydown', handleKeyDown);
+        }, [setIsOpen]);
+        
+        if (!isOpen) return (
+            <button className='btnChatBot' onClick={() => setIsOpen(!isOpen)}><img src={'./gif-tg.gif'} alt='chatbot'/></button>
+        );
         return (
             <div className='modalChat'>
+            <button className='closeChatBot' onClick={() => setIsOpen(false)}>
+                <FaTimes />
+            {/* <img src={`./cross.png`} alt="close modal" className="closeChatBot" onClick={() => setIsOpen(false)}/> */}
+            </button>
             <ChatBot
                 steps={[
                     {
