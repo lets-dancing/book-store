@@ -4,17 +4,31 @@
 // Для закрытия чата используется кнопка с иконкой крестика. 
 import ChatBot from 'react-simple-chatbot';
 import Review from './Review';
+import { useEffect, useState } from 'react';
 
 
 function SimpleForm() {
+    const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                setIsOpen(false);
+            }
+            };
+            document.addEventListener('keydown', handleKeyDown);
+            return () => document.removeEventListener('keydown', handleKeyDown);
+        }, [setIsOpen]);
     return (
-        <div className='modalChat' >
+        <div>
         <ChatBot
             headerTitle="Чат-бот"
             speechSynthesis={{ enable: true, lang: 'ru' }}
             floating={true}
+            floatingStyle={{position: "fixed", bottom: '70px'}}
             botDelay={500}
             placeholder="Напишите сообщение..."
+            toggleFloating={() => setIsOpen(!isOpen)}
+            opened={isOpen}
             steps={[
                 {
                     id: '1',
