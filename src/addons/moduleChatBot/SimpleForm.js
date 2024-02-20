@@ -2,31 +2,19 @@
 // Пользователь может открыть чат, ответить на вопросы бота о своем имени, возрасте и любимой книге. 
 // Данные проверяются на корректность, и пользователь может обновить свои ответы. 
 // Для закрытия чата используется кнопка с иконкой крестика. 
-// Также реализовано закрытие чата при нажатии клавиши Escape.
-import React, { useEffect, useState } from 'react'
 import ChatBot from 'react-simple-chatbot';
 import Review from './Review';
-import { FaTimes } from 'react-icons/fa';
+
+
 function SimpleForm() {
-    const [isOpen, setIsOpen] = useState(false);
-    useEffect(() => {
-        const handleKeyDown = (e) => {
-            if (e.key === 'Escape') {
-                setIsOpen(false);
-            }
-            };
-            document.addEventListener('keydown', handleKeyDown);
-            return () => document.removeEventListener('keydown', handleKeyDown);
-        }, [setIsOpen]);
-        if (!isOpen) return (
-            <button className='btnChatBot' onClick={() => setIsOpen(!isOpen)}><img src={'./gif-tg.gif'} alt='chatbot'/></button>
-        );
     return (
-        <div className='modalChat'>
-        <button className='closeChatBot' onClick={() => setIsOpen(false)}>
-            <FaTimes />
-        </button>
+        <div className='modalChat' >
         <ChatBot
+            headerTitle="Чат-бот"
+            speechSynthesis={{ enable: true, lang: 'ru' }}
+            floating={true}
+            botDelay={500}
+            placeholder="Напишите сообщение..."
             steps={[
                 {
                     id: '1',
