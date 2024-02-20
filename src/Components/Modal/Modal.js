@@ -34,7 +34,7 @@ function Modal({ isOpen, setIsOpen, children }) {
 
     return (
         <div {...handlers} className='modal'>
-            <img src={`./cross.png`} alt="close modal" className="close" onClick={() => setIsOpen(false)}/>
+            <img src={`./cross.png`} alt="close modal" className="closeModalIcon" onClick={() => setIsOpen(false)}/>
             <div className='overlay' onClick={closeModal}>{children}</div>
         </div>
     )
